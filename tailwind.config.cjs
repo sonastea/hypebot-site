@@ -8,6 +8,7 @@ module.exports = {
         primary: "#E2FCEF",
         secondary: "#9B287B",
         accent: "#5c164E",
+        primary_text: "#1c380f",
       },
       fontFamily: {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],

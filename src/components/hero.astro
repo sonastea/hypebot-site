@@ -6,13 +6,34 @@ import heroImage from "../hero.svg";
 import Container from "./container.astro";
 ---
 
+<script>
+  const servers = document.getElementById("s-servers");
+  const users = document.getElementById("s-users");
+
+  async function getStats() {
+    await fetch(`${import.meta.env.PUBLIC_HYPEAPI}/stats`, {
+      method: "GET",
+      mode: "cors",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (servers !== null) servers.innerHTML = data.servers;
+        if (users !== null) users.innerHTML = data.users;
+      })
+      .catch(() => console.warn("Unable to retrieve hypebot data"));
+  }
+
+  getStats();
+  setInterval(getStats, 60000);
+</script>
+
 <Container>
   <main class="grid lg:grid-cols-2 place-items-center pt-8 pb-16 md:py-20">
     <div>
       <Picture
         class="rounded-md shadow-md"
         src={heroImage}
-        alt="Two people hyped"
+        alt="Hyped robot"
         widths={[200, 400, 800]}
         aspectRatio="4:3"
         sizes="(max-width:800px) 100vw, 800px"
@@ -20,31 +41,38 @@ import Container from "./container.astro";
         }
       />
       <div>
-        <div class="mt-6 flex flex-col place-items-center md:flex-row md:justify-center gap-3">
+        <div
+          class="text-white text-lg md:text-2xl mt-6 mb-4 flex flex-wrap flex-col place-items-center md:flex-row md:justify-center w-full"
+        >
           <a
-            class="w-48 md:w-56 text-white shadow-md md:text-2xl hover:-translate-y-1 duration-200 hover:bg-secondary/90 hover:text-primary flex p-1 px-2 gap-1 bg-secondary border border-secondary rounded-full items-center justify-center whitespace-nowrap"
+            class="shadow-md mb-3 md:mb-0 md:mr-2 hover:-translate-y-1 duration-100 hover:text-primary hover:bg-secondary/95 flex p-1 px-4 bg-secondary rounded-full items-center justify-center whitespace-nowrap"
             href="https://discord.com/api/oauth2/authorize?client_id=994803132259381291&permissions=277028883456&scope=bot"
             rel="noopener"
             target="_blank"
-          >
-            <Icon class="w-4 h-4" name="bx:bxs-bot" />
-            Add to server
+            ><Icon class="w-5 h-5 md:w-8 md:h-8 mr-2" name="bx:bxs-bot" />
+            <span>Add to server</span>
           </a>
           <a
-            class="w-48 md:w-56 shadow-md md:text-2xl hover:-translate-y-1 transition-transform duration-200 hover:border-secondary/90 hover:text-secondary/90 flex p-1 px-2 gap-1 text-accent border border-accent rounded-full items-center justify-center whitespace-nowrap"
-            href="https://github.com/sonastea/hypebot"
+            class="shadow-md hover:-translate-y-1 duration-100 bg-accent hover:text-primary hover:bg-accent/95 flex p-1 px-3 rounded-full items-center justify-center whitespace-nowrap"
+            href="https://discord.com/invite/y5XaQCbGXR"
             rel="noopener"
             target="_blank"
-          >
-            <Icon class="w-4 h-4" name="bx:bxl-discord-alt" />
-            Support server
+            ><Icon
+              class="w-5 h-5 md:w-8 md:h-8 mr-2"
+              name="bx:bxl-discord-alt"
+            />
+            <span>Support server</span>
           </a>
         </div>
       </div>
+      <p class="text-primary_text text-center">
+        HypeBot is in <b class="text-accent" id="s-servers"></b> servers and played
+        for <b class="text-accent" id="s-users"></b> users
+      </p>
     </div>
-    <div class="mt-6 lg:m-0">
+    <div class="mt-6 lg:m-0 lg:self-start">
       <iframe
-        class="w-72 h-80 md:w-80 md:h-96"
+        class="w-80 h-80 md:w-96 md:h-96"
         src="https://discord.com/widget?id=994801248664559637&theme=dark"
         allowtransparency="true"
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"

@@ -6,27 +6,17 @@ import Container from "./container.astro";
 <Container>
   <header>
     <nav class="flex flex-col md:flex-row justify-between items-center py-4">
-      <a href="/" class="text-lg">
-        <span class="group">
-          <span
-            class="inline-block font-bold text-accent hover:delay-150 group-hover:animate-[spin_2s_linear_infinite]"
-            >Hype</span
-          ><span class="rounded-sm m-px p-px text-primary bg-secondary"
-            >Bot</span
-          >
-        </span>
+      <a href="/" class="text-lg md:text-2xl group">
+        <span class="group-hover:text-secondary/90 font-semibold inline-block text-accent">HypeBot</span>
       </a>
       <div class="hidden md:block">
         <a
-          class="text-secondary group"
+          class="text-primary_text group"
           href="https://github.com/sonastea/hypebot"
           target="_blank"
           rel="noopener noreferer"
         >
-          <Icon
-            class="w-8 h-8 group-hover:text-accent"
-            name="bx:bxl-github"
-          />
+          <Icon class="w-8 h-8 group-hover:text-accent" name="bx:bxl-github" />
         </a>
       </div>
     </nav>
