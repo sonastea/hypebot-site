@@ -1,5 +1,7 @@
 FROM node:lts-alpine AS build
 
+ENV PUBLIC_HYPEAPI="https://hypebot.dev"
+
 WORKDIR /app
 RUN npm install -g pnpm@8.1.1
 COPY . .
