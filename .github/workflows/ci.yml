@@ -49,4 +49,4 @@ jobs:
           script: |
             docker pull ghcr.io/sonastea/hypesite:master
             docker rm -f hypesite
-            docker run -d --name hypesite --network=caddy_default -p 127.0.0.1:8080:80 sonastea/hypesite:master
+            docker run -d --name hypesite --network=caddy_default -p 127.0.0.1:8080:80 ghcr.io/sonastea/hypesite:master
