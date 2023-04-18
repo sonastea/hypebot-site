@@ -3,7 +3,7 @@ FROM node:lts-alpine AS build
 ENV PUBLIC_HYPEAPI="https://hypebot.dev"
 
 WORKDIR /app
-RUN npm install -g pnpm@8.1.1
+RUN npm install -g pnpm@8.3.0
 COPY . .
 RUN pnpm i && pnpm build
 
