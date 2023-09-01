@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-import { Picture } from "@astrojs/image/components";
+import { Image } from 'astro:assets';
 
 import heroImage from "../hero.svg";
 import Container from "./container.astro";
@@ -30,12 +30,10 @@ import Container from "./container.astro";
 <Container>
   <main class="grid lg:grid-cols-2 place-items-center pt-8 pb-16 md:py-20">
     <div>
-      <Picture
+      <Image
         class="rounded-md shadow-md"
         src={heroImage}
         alt="Hyped robot"
-        widths={[200, 400, 800]}
-        aspectRatio="4:3"
         sizes="(max-width:800px) 100vw, 800px"
         loading="eager"
         }
