@@ -6,15 +6,18 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "lint-eslint": "eslint src/**/*{.js,.jsx,.astro,.ts,.tsx}",
+    "prettier-check": "prettier --check src/**/*{.js,.jsx,.astro,.ts,.tsx}",
+    "prettier-fix": "prettier --write src/**/*{.js,.jsx,.astro,.ts,.tsx}",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/ts-plugin": "^1.4.0",
+    "@astrojs/ts-plugin": "^1.5.0",
     "@fontsource/inter": "^5.0.16",
-    "astro": "^4.3.2",
+    "astro": "^4.3.5",
     "astro-icon": "^1.1.0",
     "astro-seo": "^0.8.0",
     "sharp": "^0.33.2",
@@ -23,6 +26,9 @@
   "devDependencies": {
     "@iconify-json/bx": "^1.1.10",
     "@tailwindcss/typography": "^0.5.10",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-astro": "^0.31.4",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
   }

@@ -10,13 +10,13 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 const openGraphImageURL = new URL(
   "/open_graph_image.png",
-  Astro.site
+  Astro.site,
 ).toString();
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

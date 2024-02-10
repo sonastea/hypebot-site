@@ -1,14 +1,23 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "target": "es2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["es2020", "dom"],
+
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": true,
     "strictNullChecks": true,
     "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    "include": ["src/**/*"],
     "baseUrl": ".",
-    "plugins": [
-      {
-        "name": "@astrojs/ts-plugin"
-      }
-    ],
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
