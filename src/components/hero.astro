@@ -20,7 +20,13 @@ import Container from "./container.astro";
         if (servers !== null) servers.innerHTML = data.servers;
         if (users !== null) users.innerHTML = data.users;
       })
-      .catch(() => console.warn("Unable to retrieve hypebot data"));
+    .catch(() => {
+      console.warn("Unable to retrieve hypebot stats");
+      servers?.classList.add('text-fallback_text');
+      users?.classList.add('text-fallback_text');
+      if (servers !== null) servers.innerHTML = "n/a";
+      if (users !== null) users.innerHTML = "n/a";
+    });
   }
 
   getStats();

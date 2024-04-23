@@ -8,6 +8,7 @@ module.exports = {
         primary: "#E2FCEF",
         secondary: "#9B287B",
         accent: "#5c164E",
+        fallback_text: "#414A4C",
         primary_text: "#1c380f",
       },
       fontFamily: {
