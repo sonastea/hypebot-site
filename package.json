@@ -1,7 +1,7 @@
 {
   "name": "hypebot-site",
   "type": "module",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,26 +13,25 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/ts-plugin": "^1.9.1",
-    "@fontsource/inter": "^5.0.20",
-    "astro": "^4.13.3",
-    "astro-icon": "^1.1.0",
-    "astro-seo": "^0.8.4",
-    "sharp": "^0.33.4",
-    "tailwindcss": "^3.4.9"
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/ts-plugin": "^1.10.6",
+    "@fontsource/inter": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.1",
+    "astro-icon": "^1.1.5",
+    "astro-seo": "^1.1.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
-    "@iconify-json/bx": "^1.1.11",
-    "@tailwindcss/typography": "^0.5.14",
-    "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/parser": "^8.1.0",
-    "eslint": "^9.9.0",
-    "eslint-plugin-astro": "^1.2.3",
+    "@eslint/js": "^9.39.2",
+    "@iconify-json/bx": "^1.2.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
+    "eslint-plugin-astro": "^1.5.0",
     "js": "link:@types/eslint/js",
-    "prettier": "^3.3.3",
+    "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1"
   }
 }

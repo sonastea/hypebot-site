@@ -1,11 +1,12 @@
 ---
 import { Icon } from "astro-icon/components";
+const year = new Date().getFullYear();
 ---
 
 <footer class="my-12">
   <div class="flex flex-col-reverse md:flex-row justify-center items-center">
     <p class="text-primary_text">
-      Copyright © 2024 HypeBot. All rights reserved.
+      Copyright © {year} HypeBot. All rights reserved.
     </p>
     <a
       class="text-primary_text group md:hidden"

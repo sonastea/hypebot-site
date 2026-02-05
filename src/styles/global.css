@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #e2fcef;
+  --color-secondary: #9b287b;
+  --color-accent: #5c164e;
+  --color-fallback_text: #414a4c;
+  --color-primary_text: #1c380f;
+
+  --font-sans: "InterVariable", "Inter", system-ui, sans-serif;
+}

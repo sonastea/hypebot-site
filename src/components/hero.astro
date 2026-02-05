@@ -20,13 +20,13 @@ import Container from "./container.astro";
         if (servers !== null) servers.innerHTML = data.servers;
         if (users !== null) users.innerHTML = data.users;
       })
-    .catch(() => {
-      console.warn("Unable to retrieve hypebot stats");
-      servers?.classList.add('text-fallback_text');
-      users?.classList.add('text-fallback_text');
-      if (servers !== null) servers.innerHTML = "n/a";
-      if (users !== null) users.innerHTML = "n/a";
-    });
+      .catch(() => {
+        console.warn("Unable to retrieve hypebot stats");
+        servers?.classList.add("text-fallback_text");
+        users?.classList.add("text-fallback_text");
+        if (servers !== null) servers.innerHTML = "n/a";
+        if (users !== null) users.innerHTML = "n/a";
+      });
   }
 
   getStats();
@@ -37,7 +37,7 @@ import Container from "./container.astro";
   <main class="grid lg:grid-cols-2 place-items-center pt-8 pb-16 md:py-20">
     <div>
       <Image
-        class="rounded-md shadow-md"
+        class="rounded-sm shadow-sm"
         src={heroImage}
         alt="Hyped robot"
         sizes="(max-width:800px) 100vw, 800px"
@@ -48,7 +48,7 @@ import Container from "./container.astro";
           class="text-white text-lg md:text-2xl mt-6 mb-4 flex flex-wrap flex-col place-items-center md:flex-row md:justify-center w-full"
         >
           <a
-            class="shadow-md mb-3 md:mb-0 md:mr-2 hover:text-primary hover:brightness-110 flex p-1 px-4 bg-secondary rounded-full items-center justify-center whitespace-nowrap"
+            class="shadow-sm mb-3 md:mb-0 md:mr-2 hover:text-primary hover:brightness-110 flex p-1 px-4 bg-secondary rounded-full items-center justify-center whitespace-nowrap"
             href="https://discord.com/api/oauth2/authorize?client_id=994803132259381291&permissions=277028883456&scope=bot"
             rel="noopener"
             target="_blank"
@@ -56,7 +56,7 @@ import Container from "./container.astro";
             <span>Add to server</span>
           </a>
           <a
-            class="shadow-md bg-accent hover:text-primary hover:brightness-125 flex p-1 px-3 rounded-full items-center justify-center whitespace-nowrap"
+            class="shadow-sm bg-accent hover:text-primary hover:brightness-125 flex p-1 px-3 rounded-full items-center justify-center whitespace-nowrap"
             href="https://discord.com/invite/y5XaQCbGXR"
             rel="noopener"
             target="_blank"
